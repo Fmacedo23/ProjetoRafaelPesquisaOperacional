@@ -1,0 +1,7 @@
+{
+    "executavel": "seu_programa.exe",
+    "parametros": [
+        {"nome": "x1", "tipo": "categorico", "limites": ["baixo", "alto"], "valor_inicial": "baixo"},
+        {"nome": "x2", "tipo": "inteiro", "limites": [0, 100], "passo": 5, "valor_inicial": 50}
+    ]
+}
