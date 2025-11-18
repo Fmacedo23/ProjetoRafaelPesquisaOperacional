@@ -1,4 +1,0 @@
-3. Execução
-Modo Interativo (Pergunta se quer Max/Min):
-
-python main.py --config config_modelo.json
