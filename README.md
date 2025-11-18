@@ -1,37 +1,45 @@
-# Otimizador Híbrido (Black-Box Optimization) 🚀
+# 🚀 Otimizador Híbrido de Modelos "Black-Box"
 
-Este projeto implementa um sistema robusto de otimização para modelos "caixa-preta" (arquivos executáveis `.exe`).
+Este projeto é uma ferramenta avançada de otimização automática projetada para encontrar os melhores parâmetros de programas executáveis (`.exe`) externos. 
 
-O sistema utiliza uma **Estratégia Híbrida** combinando algoritmos estocásticos para exploração global e algoritmos determinísticos para refinamento local.
+Ele utiliza uma abordagem **Híbrida (Global + Local)** para garantir que você encontre o melhor resultado possível (Máximo ou Mínimo) sem precisar alterar o código do seu software original.
 
-## 🧠 Estratégia de Otimização
+---
 
-O otimizador funciona em duas fases sequenciais para garantir o melhor resultado possível:
+## 🧠 Como Funciona (A Lógica Híbrida)
 
-1.  **Fase 1 (Exploração Global):** Utiliza **TPE (Tree-structured Parzen Estimator)** via biblioteca *Optuna*. Esta fase "sobrevoa" o espaço de busca para encontrar as regiões mais promissoras, lidando bem com variáveis categóricas e inteiras.
-2.  **Fase 2 (Refinamento Local):** Utiliza **Pattern Search (Busca por Coordenadas)**. Pega o melhor resultado da Fase 1 e realiza um ajuste fino ("polimento") para encontrar o ótimo local exato.
+O sistema combina dois algoritmos poderosos em sequência:
 
-> **Nota:** Também está incluída uma implementação do método **Simplex (Nelder-Mead)** como alternativa geométrica.
+1.  **Fase 1: Exploração Global (Optuna/TPE)**
+    * Usa o algoritmo *Tree-structured Parzen Estimator*.
+    * "Sobrevoa" todo o espaço de possibilidades para identificar as regiões mais promissoras.
+    * Lida nativamente com números inteiros, decimais e categorias de texto.
 
-## 🛠️ Funcionalidades
+2.  **Fase 2: Refinamento Local (Pattern Search)**
+    * Pega o melhor resultado encontrado na Fase 1.
+    * Realiza uma busca determinística (passo a passo) para "escalar a montanha" até o pico exato.
+    * Garante precisão decimal no resultado final.
 
-* **Configuração via JSON:** Não é necessário alterar o código. Cada modelo (`.exe`) possui seu próprio "mapa" em arquivo `.json`.
-* **Objetivos Flexíveis:** O usuário pode escolher **Maximizar** (ex: lucro) ou **Minimizar** (ex: erro) via linha de comando ou menu interativo.
-* **Sistema "Blindado":** Possui proteção contra interrupções (`Ctrl+C`). Se o usuário parar a execução, o programa salva o melhor resultado encontrado até aquele momento e gera o relatório.
-* **Relatórios Automáticos:** Ao final, gera um arquivo `.txt` com estatísticas de tempo, evolução da otimização e os parâmetros ideais.
-* **Suporte a Tipos Mistos:** Otimiza parâmetros inteiros, flutuantes (floats) e categóricos (texto) simultaneamente.
+> **Bônus:** O repositório também inclui um otimizador baseado no método **Simplex (Nelder-Mead)** como alternativa geométrica.
 
-## 📂 Estrutura de Arquivos
+---
 
-* `main.py`: **O Otimizador Principal.** Contém a lógica híbrida (Optuna + Pattern Search) e o gerador de relatórios.
-* `optimize_simplex.py`: Uma implementação alternativa usando o algoritmo Nelder-Mead (SciPy).
-* `config_*.json`: Arquivos de configuração que descrevem os parâmetros e limites de cada executável.
-* `requirements.txt`: Lista de dependências Python.
+## 📂 Estrutura do Projeto
 
-## 🚀 Como Usar
+* `main.py`: **O Script Principal.** Contém o motor híbrido, a proteção contra falhas e o gerador de relatórios.
+* `optimize_simplex.py`: Uma implementação alternativa usando o algoritmo Simplex (SciPy).
+* `config_*.json`: Arquivos de configuração (o "mapa" que ensina o Python a ler o seu .exe).
+* `requirements.txt`: Lista de bibliotecas necessárias.
 
-### 1. Instalação
-Certifique-se de ter o Python instalado e instale as dependências:
+---
+
+## 🛠️ Instalação
+
+### 1. Pré-requisitos
+Certifique-se de ter o **Python 3.8+** instalado no seu computador.
+
+### 2. Instalar Dependências
+Abra o terminal na pasta do projeto e execute:
 
 ```bash
 pip install -r requirements.txt
