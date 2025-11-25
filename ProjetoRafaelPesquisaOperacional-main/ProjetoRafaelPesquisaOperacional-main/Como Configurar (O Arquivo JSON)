@@ -1,0 +1,27 @@
+Estrutura do JSON:
+
+{
+    "executavel": "meu_programa.exe",
+    "parametros": [
+        {
+            "nome": "x1",
+            "tipo": "categorico",
+            "limites": ["baixo", "medio", "alto"],
+            "valor_inicial": "medio"
+        },
+        {
+            "nome": "x2",
+            "tipo": "inteiro",
+            "limites": [0, 100],
+            "passo": 5,
+            "valor_inicial": 50
+        },
+        {
+            "nome": "x3",
+            "tipo": "float",
+            "limites": [0.0, 1.0],
+            "passo": 0.01,
+            "valor_inicial": 0.5
+        }
+    ]
+}
