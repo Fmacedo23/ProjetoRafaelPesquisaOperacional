@@ -1,45 +1,21 @@
-# 🚀 Otimizador Híbrido de Modelos "Black-Box"
+# 🚀 Otimizador de Modelos "Black-Box" (Sistema Híbrido)
 
-Este projeto é uma ferramenta avançada de otimização automática projetada para encontrar os melhores parâmetros de programas executáveis (`.exe`) externos. 
+Este projeto contém uma suíte completa de ferramentas de otimização para encontrar os melhores parâmetros de executáveis (`.exe`) externos.
 
-Ele utiliza uma abordagem **Híbrida (Global + Local)** para garantir que você encontre o melhor resultado possível (Máximo ou Mínimo) sem precisar alterar o código do seu software original.
+O sistema inclui três estratégias diferentes para garantir que você encontre o resultado máximo (ou mínimo) possível:
 
----
-
-## 🧠 Como Funciona (A Lógica Híbrida)
-
-O sistema combina dois algoritmos poderosos em sequência:
-
-1.  **Fase 1: Exploração Global (Optuna/TPE)**
-    * Usa o algoritmo *Tree-structured Parzen Estimator*.
-    * "Sobrevoa" todo o espaço de possibilidades para identificar as regiões mais promissoras.
-    * Lida nativamente com números inteiros, decimais e categorias de texto.
-
-2.  **Fase 2: Refinamento Local (Pattern Search)**
-    * Pega o melhor resultado encontrado na Fase 1.
-    * Realiza uma busca determinística (passo a passo) para "escalar a montanha" até o pico exato.
-    * Garante precisão decimal no resultado final.
-
-> **Bônus:** O repositório também inclui um otimizador baseado no método **Simplex (Nelder-Mead)** como alternativa geométrica.
+1.  **Híbrido (`main.py`):** A melhor opção. Usa Inteligência Artificial (Optuna) para achar a região certa e depois Refinamento Local (Pattern Search) para achar o topo exato.
+2.  **Swarm Infinito (`optimize_swarm_infinito.py`):** Exploração Global pura. Testa milhares de possibilidades aleatórias inteligentes sem parar.
+3.  **Pattern Search Infinito (`optimize_pattern_infinito.py`):** Busca Local pura. Refina passo-a-passo a partir de um ponto inicial.
 
 ---
 
-## 📂 Estrutura do Projeto
+## 🛠️ 1. Instalação (Faça isso primeiro)
 
-* `main.py`: **O Script Principal.** Contém o motor híbrido, a proteção contra falhas e o gerador de relatórios.
-* `optimize_simplex.py`: Uma implementação alternativa usando o algoritmo Simplex (SciPy).
-* `config_*.json`: Arquivos de configuração (o "mapa" que ensina o Python a ler o seu .exe).
-* `requirements.txt`: Lista de bibliotecas necessárias.
+Antes de rodar qualquer coisa, você precisa instalar as bibliotecas necessárias.
 
----
-
-## 🛠️ Instalação
-
-### 1. Pré-requisitos
-Certifique-se de ter o **Python 3.8+** instalado no seu computador.
-
-### 2. Instalar Dependências
-Abra o terminal na pasta do projeto e execute:
+1.  Abra o terminal na pasta do projeto.
+2.  Execute o comando:
 
 ```bash
 pip install -r requirements.txt
