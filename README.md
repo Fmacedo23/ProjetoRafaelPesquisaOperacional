@@ -16,53 +16,7 @@ Antes de rodar qualquer coisa, você precisa instalar as bibliotecas necessária
 
 1.  Abra o terminal na pasta do projeto.
 2.  Execute o comando:
-
-```bash
 pip install -r requirements.txt
-
-⚙️ 2. Configuração (O Mapa do Tesouro)
-
-{
-    "executavel": "simulado.exe",
-    "parametros": [
-        {
-            "nome": "x1",
-            "tipo": "inteiro",
-            "limites": [1, 100],
-            "valor_inicial": 50,
-            "passo": 5
-        },
-        {
-            "nome": "x2",
-            "tipo": "inteiro",
-            "limites": [1, 100],
-            "valor_inicial": 50,
-            "passo": 5
-        },
-        {
-            "nome": "x3",
-            "tipo": "inteiro",
-            "limites": [1, 100],
-            "valor_inicial": 50,
-            "passo": 5
-        },
-        {
-            "nome": "x4",
-            "tipo": "inteiro",
-            "limites": [1, 100],
-            "valor_inicial": 50,
-            "passo": 5
-        },
-        {
-            "nome": "x5",
-            "tipo": "inteiro",
-            "limites": [1, 100],
-            "valor_inicial": 50,
-            "passo": 5
-        }
-    ]
-}
-
 
 🚀 3. Como Rodar (Escolha sua Estratégia)
 python main.py --config config_simulado.json
