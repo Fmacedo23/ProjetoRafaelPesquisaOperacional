@@ -1,0 +1,16 @@
+{
+    "executavel": "provab2.exe",
+    "objetivo": "maximizar",
+    "parametros": [
+        { "nome": "x1", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x2", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x3", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x4", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x5", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x6", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x7", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x8", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x9", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 },
+        { "nome": "x10", "tipo": "inteiro", "limites": [1, 1000], "valor_inicial": 500, "passo": 5 }
+    ]
+}

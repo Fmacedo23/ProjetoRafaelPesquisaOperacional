@@ -1,0 +1,75 @@
+{
+    "executavel": "modelo10.exe",
+    "objetivo": "maximizar",
+    "parametros": [
+        {
+            "nome": "x1",
+            "tipo": "categorico",
+            "limites": ["baixo", "medio", "médio", "alto"],
+            "valor_inicial": "medio"
+        },
+        {
+            "nome": "x2",
+            "tipo": "inteiro",
+            "limites": [1, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        },
+        {
+            "nome": "x3",
+            "tipo": "inteiro",
+            "limites": [1, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        },
+        {
+            "nome": "x4",
+            "tipo": "inteiro",
+            "limites": [0, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        },
+        {
+            "nome": "x5",
+            "tipo": "inteiro",
+            "limites": [0, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        },
+        {
+            "nome": "x6",
+            "tipo": "inteiro",
+            "limites": [0, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        },
+        {
+            "nome": "x7",
+            "tipo": "inteiro",
+            "limites": [0, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        },
+        {
+            "nome": "x8",
+            "tipo": "inteiro",
+            "limites": [0, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        },
+        {
+            "nome": "x9",
+            "tipo": "inteiro",
+            "limites": [0, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        },
+        {
+            "nome": "x10",
+            "tipo": "inteiro",
+            "limites": [0, 100],
+            "valor_inicial": 50,
+            "passo": 5
+        }
+    ]
+}
