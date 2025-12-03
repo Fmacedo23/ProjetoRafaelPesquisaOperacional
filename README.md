@@ -19,7 +19,7 @@ Antes de rodar qualquer coisa, você precisa instalar as bibliotecas necessária
 pip install -r requirements.txt
 
 🚀 3. Como Rodar (Escolha sua Estratégia)
-python main.py --config config_simulado.json
-python main.py --config config_simulado.json --max
-python optimize_swarm_infinito.py --config config_simulado.json --max
-python optimize_pattern_infinito.py --config config_simulado.json --max
+python main.py --config config_provab2.json 
+python main.py --config config_provab2.json --max
+python optimize_swarm_infinito.py --config config_provab2.json --max
+python optimize_pattern_infinito.py --config config_provab2.json --max
